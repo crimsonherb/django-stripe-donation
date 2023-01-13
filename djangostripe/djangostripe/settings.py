@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from djangostripe import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -120,9 +121,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR/'static']
 
 
-STRIPE_PUBLIC_KEY = "pk_test_51Lq5IQLVt3C1WQQkeGt2ue6mPOL4rk40FldgkNyus1XCLdp4ToSTQxRcjwjSTUhTYhp0dPIXXkso2d00wpZqkkLB00rE8Ymk9E"
-STRIPE_SECRET_KEY = "sk_test_51Lq5IQLVt3C1WQQkseACgB35hl7XCKOAj0JoyQSTcJELuNM1LF6Xu1FYRv0R4SHEatFMNJvtkCj8y8Jmaxq4EHPI00VhpkU3T0"
-STRIPE_ENDPOINT_SECRET = "whsec_a1b8644affe009a9e7ff2f2954d029c6bad8420dbba0c0151ff4cf9fd376c053"
+STRIPE_PUBLIC_KEY = config.STRIPE_PUBLIC_KEY
+STRIPE_SECRET_KEY = config.STRIPE_SECRET_KEY
+STRIPE_ENDPOINT_SECRET = config.STRIPE_ENDPOINT_SECRET
 
 
 # Default primary key field type
